@@ -17,6 +17,15 @@ Entry.prototype.vowelsConsonants = function() {
   };
 };
 
+Entry.prototype.getTeaser = function() {
+  var teaser = this.body.split(".")[0];
+  if (teaser.split(" ").length <= 8) {
+    return teaser;
+  } else {
+    return teaser.split(" ").splice(0, 8).join(" ");
+  }
+};
+
 exports.entryModule = Entry;
 
 },{}],2:[function(require,module,exports){
@@ -30,13 +39,13 @@ $(document).ready(function() {
     var newEntry = new Entry(title, body);
     var entryWordCount = newEntry.wordCount();
     var entryVowelsConsonants = newEntry.vowelsConsonants();
+    var teaser = newEntry.getTeaser();
     $("#entry-title").append(title);
     $("#entry-body").append(body);
     $("#word-count").append(entryWordCount);
     $("#vowel-count").append(entryVowelsConsonants.vowelCount);
-    console.log(entryVowelsConsonants.vowelCount);
     $("#consonant-count").append(entryVowelsConsonants.consonantCount);
-    console.log(entryVowelsConsonants.consonantCount);
+    $("#teaser").append(teaser);
   });
 });
 

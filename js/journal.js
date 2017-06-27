@@ -16,4 +16,13 @@ Entry.prototype.vowelsConsonants = function() {
   };
 };
 
+Entry.prototype.getTeaser = function() {
+  var teaser = this.body.split(".")[0];
+  if (teaser.split(" ").length <= 8) {
+    return teaser;
+  } else {
+    return teaser.split(" ").splice(0, 8).join(" ");
+  }
+};
+
 exports.entryModule = Entry;
