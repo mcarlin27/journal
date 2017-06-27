@@ -9,4 +9,11 @@ Entry.prototype.wordCount = function() {
   return titleLength + bodyLength;
 };
 
+Entry.prototype.vowelsConsonants = function() {
+  return {
+    vowelCount: ((this.title.match(/[aeiou]/gi).length) + (this.body.match(/[aeiou]/gi).length)),
+    consonantCount: ((this.title.match(/[bcdfghjklmnpqrstvwxyz]/gi).length) + (this.body.match(/[bcdfghjklmnpqrstvwxyz]/gi).length))
+  };
+};
+
 exports.entryModule = Entry;
