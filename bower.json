@@ -1,0 +1,22 @@
+{
+  "name": "journal",
+  "description": "a place for users to input journal entries",
+  "main": "index.js",
+  "authors": [
+    "Marilyn Carlin <marilyn.s.carlin@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap": "^3.3.7"
+  }
+}
