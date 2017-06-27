@@ -40,12 +40,12 @@ $(document).ready(function() {
     var entryWordCount = newEntry.wordCount();
     var entryVowelsConsonants = newEntry.vowelsConsonants();
     var teaser = newEntry.getTeaser();
-    $("#entry-title").append(title);
-    $("#entry-body").append(body);
-    $("#word-count").append(entryWordCount);
-    $("#vowel-count").append(entryVowelsConsonants.vowelCount);
-    $("#consonant-count").append(entryVowelsConsonants.consonantCount);
-    $("#teaser").append(teaser);
+    $("#entry-title").text(title);
+    $("#entry-body").text(body);
+    $("#word-count").text(entryWordCount);
+    $("#vowel-count").text(entryVowelsConsonants.vowelCount);
+    $("#consonant-count").text(entryVowelsConsonants.consonantCount);
+    $("#teaser").text(teaser);
   });
 });
 
