@@ -17,3 +17,7 @@ $(document).ready(function() {
     $("#teaser").text(teaser);
   });
 });
+
+$(document).ready(function(){
+  $('#time').text(moment());
+});
